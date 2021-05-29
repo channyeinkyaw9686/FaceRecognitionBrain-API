@@ -24,7 +24,7 @@ const db = knex({
   },
 });
 
-//app.get('/', users.getAll(db));
+app.get('/', users.getAll(db));
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
 
