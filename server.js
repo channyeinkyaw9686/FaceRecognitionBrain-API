@@ -3,8 +3,9 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
-const app = express();
 const register = require('./controllers/register');
+
+const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -85,6 +86,6 @@ app.put('/image', (req, res) => {
     .catch((err) => res.status(400).json('unable to get entries'));
 });
 
-app.listen(3001, () => {
-  console.log('app is running on port 3001');
+app.listen(3030, () => {
+  console.log('app is running on port 3030');
 });
