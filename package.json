@@ -1,11 +1,11 @@
 {
-  "name": "FaceRecognitionBrain-API",
+  "name": "facerecognitionbrain-api",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start-dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
