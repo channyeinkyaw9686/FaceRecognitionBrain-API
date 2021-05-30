@@ -16,10 +16,10 @@ app.use(bodyParser.json());
 const db = knex({
   client: 'pg',
   connection: {
-    host: 'postgresql-dimensional-71945',
-    user: 'robert',
-    password: '',
-    database: 'face-recognition-brain',
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   },
 });
 
