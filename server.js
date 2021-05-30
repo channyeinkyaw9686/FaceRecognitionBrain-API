@@ -7,7 +7,6 @@ const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
-const users = require('./controllers/users');
 
 const app = express();
 
@@ -24,7 +23,9 @@ const db = knex({
   },
 });
 
-app.get('/', users.getAll(db));
+app.get('/', (req, res) => {
+  res.send('it is working!');
+});
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
 
